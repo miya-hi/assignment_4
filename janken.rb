@@ -10,7 +10,7 @@ class Player
     # 「input_hand」が「0, 1, 2」のいずれかだと繰り返し処理を終了し、それ以外（アルファベットも含む）だと繰り返し処理を継続します。
     while true
       # if 「input_hand」が「0, 1, 2」のいずれかの場合だった場合
-      if input_hand = "0" || "1" || "2"
+      if input_hand == "0" || input_hand == "1" || input_hand == "2"
         input_hand = input_hand.to_i
       # ヒント：include?メソッドについて調べてみましょう。
         # 「input_hand」をそのまま返す。
@@ -47,7 +47,7 @@ class Janken
     puts "相手の手は#{janken[enemy_hand]}です。"
     # Playerクラスの戻り値とEnemyクラスの戻り値からじゃんけんするロジックを作成します。
      # Playerクラスの戻り値(player_hand)とEnemyクラスの戻り値(enemy_hand)の値が同じだった場合
-     if player_hand == enemy_hand
+    if player_hand == enemy_hand
       # 「あいこ」を出力します。
       puts "あいこ"
       #「true」を返してじゃんけんを繰り返し実行させます。
